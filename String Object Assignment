@@ -1,0 +1,35 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package string_object_assignment;
+
+/**
+ *
+ * @author jleonhardt2027
+ */
+public class String_Object_Assignment {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //Creation of the string variable
+        String fullName = "Jake Leonhardt";
+        //including the inner quotes
+        System.out.println("My name is \"" + fullName + "\"");
+        //figuring out the length of my name
+        System.out.println("My name length is " + fullName.length());
+        //making my name in all uppercase
+        System.out.println("My name in upper case is " + fullName.toUpperCase() + "");
+        //making my name in all lowercase
+        System.out.println("My name in lower case is " + fullName.toLowerCase() + "");
+        //getting the first character (starts a 0 and not 1)-do not forget later
+        System.out.println("The first letter in my name is " + fullName.charAt(0) + "");
+        //getting the last character (number 13)
+        System.out.println("The last letter in my name is " + fullName.charAt(13) + "");
+        //Finding the index # of where there is a space in the string
+        System.out.println("The index of the space between the names is " + fullName.indexOf(" "));
+    }
+    
+}
