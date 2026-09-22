@@ -1,0 +1,52 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package phone_number_generator;
+
+import java.util.Scanner;
+import java.util.Random;
+
+/**
+ *
+ * @author jleonhardt2027
+ */
+public class Phone_Number_Generator {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);//scanner added
+        String n = "n";
+        Random generator = new Random(); //random generator completed
+        do {
+            System.out.println("Enter any letter to generate a phone number. " + "Enter -1 to stop.");
+            n = scan.next();
+            int num1;
+            int num2;
+            int num3;
+            int num4;
+            int num5;
+            int num6;
+            int num7;
+            int num8;
+            int num9;
+            int num10;
+            num1 = generator.nextInt(8);
+            num2 = generator.nextInt(8);
+            num3 = generator.nextInt(8);
+            num4 = generator.nextInt(10);
+            num5 = generator.nextInt(10);
+            num6 = generator.nextInt(10);
+            num7 = generator.nextInt(10);
+            num8 = generator.nextInt(10);
+            num9 = generator.nextInt(10);
+            num10 = generator.nextInt(10);
+            System.out.println("Your number is "+num1+num2+num3+"-"+num4+num5+num6+"-"+num7+num8+num9+num10);
+            
+        } while(!n.equals("-1"));
+    }
+    
+}
