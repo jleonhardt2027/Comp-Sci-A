@@ -1,0 +1,77 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package math_class_assignment;
+
+import java.util.Scanner;
+import java.util.Random;
+/**
+ *
+ * @author jleonhardt2027
+ */
+public class Math_Class_Assignment {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        //step one
+        int num1;
+        Random generator = new Random();
+        num1 = generator.nextInt(91);
+        double numSin = Math.sin(num1);
+        double numSinRound = roundAvoid(numSin, 3);
+        double numCos = Math.cos(num1);
+        double numCosRound = roundAvoid(numCos, 3); 
+        double numTan = Math.cos(num1);
+        double numTanRound = roundAvoid(numTan, 3);        
+        System.out.println("Number: "+num1+" Sine: "+numSinRound+" Cosine: "+numCosRound+" Tangent: "+numTanRound);
+        //step two
+        double num2 = generator.nextDouble(21.0);
+        double circleArea = roundAvoid(Math.PI*num2*num2, 3);
+        double sphereVolume = roundAvoid(Math.PI*num2*num2*num2*(4/3), 3);
+        double num2R = roundAvoid(num2, 3);
+        System.out.println("Number: "+num2R+" Area: "+circleArea+" Volume: "+sphereVolume);
+        //step 3
+        double num3 = generator.nextDouble(100000000000.0-100000000.0)+1;//big # generator
+        double num3R = roundAvoid(num3, 1);
+        double sqrtNum3 = roundAvoid(Math.sqrt(num3), 5);
+        double lnNum3 = roundAvoid(Math.log(num3), 5);
+        double log10Num3 = roundAvoid(Math.log10(num3), 5);
+        System.out.println("Number: "+num3R+" Square Root: "+sqrtNum3+" Natural Log: "+lnNum3+" Log Base 10: "+log10Num3);
+        //step 4      
+        double speedOfLight = 299792458.0;  // Stores the speed of light
+
+        double massKg = num3  // Starts calculating mass in kilograms
+                / java.lang.Math.pow(speedOfLight, 2);  // Uses E=mc² to calculate mass
+
+        double massGrams = massKg * 1000.0;  // Converts kilograms to grams
+
+        System.out.println();  // Prints a blank line
+        System.out.println("Mass Required in Grams: " + massGrams);  // Prints the mass in grams
+
+       
+        System.out.println();  // Prints a blank line
+        System.out.print("Enter a real number: ");  // Prompts the user for a real number
+        double userValue = scan.nextDouble();  // Reads the user's real number
+
+        System.out.print("Enter an integer: ");  // Prompts the user for an integer
+        int exponent = scan.nextInt();  // Reads the user's integer
+
+        System.out.print("Enter number of decimal places: ");  // Prompts for decimal places
+        int decimalPlaces = scan.nextInt();  // Reads the number of decimal places
+
+        double answer = java.lang.Math.pow(userValue, exponent);  // Raises the number to the given exponent
+
+        System.out.println("Answer: " + roundAvoid(answer, decimalPlaces));  // Prints the rounded answer
+
+        scan.close();  // Closes the Scanner
+    }
+    
+    public static double roundAvoid(double value, int places) {
+        double scale = Math.pow(10, places);
+        return Math.round(value * scale) / scale;
+    }
+}
