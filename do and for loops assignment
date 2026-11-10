@@ -1,0 +1,80 @@
+package stars_loops;
+
+/**
+ *
+ * @author jleonhardt2027
+ */
+public class Stars_Loops {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        final int MAX_ROWS = 10;
+        //row a
+        System.out.println("a.");
+        //row a stars
+        for (int row = MAX_ROWS; row >= 1; row--)
+        {
+            //print out stars for the row
+            for (int star = 1; star <= row; star++){
+            System.out.print("*");
+            }
+            //newline for a new row
+            System.out.println();
+        }
+        //row b
+        System.out.println("b.");
+        // row b stars
+        for (int row = 1; row <= MAX_ROWS; row++) {
+            for (int space = 1; space <= MAX_ROWS - row; space++){
+                System.out.print(" ");
+            }
+            for (int star = 1; star <= row; star++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //row c
+        System.out.println("c.");
+        //row c stars
+        for (int row = MAX_ROWS; row >= 1; row--) {
+            
+            for (int space = 1; space <= MAX_ROWS - row; space++){
+                System.out.print(" ");
+            }
+            for (int star = row; star >= 1; star--) {
+                //System.out.println("row " + row + " star " + star);
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //row d
+        System.out.println("d.");
+        //row d stars
+        for (int row = 1; row <= 5; row++) {
+            //upper shape
+            for (int space = 1; space <= 5 - row; space++) {
+                System.out.print(" ");
+            }
+        
+            for (int star = 1; star <= (2 * row - 1); star++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        //lower shape
+        for (int row = 5; row >= 1; row--) {
+            for (int space = 1; space <= 5 - row; space++) {
+                System.out.print(" ");
+            }
+            
+            for (int star = 1; star <= (2 * row - 1); star++) {
+                System.out.print("*");
+            }
+            System.out.println();
+
+        }
+    }
+}
